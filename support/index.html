@@ -7,20 +7,21 @@
 <meta name="description" content="Support for the Monthful app.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&family=Baloo+Bhaijaan+2:wght@700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@400;600&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
 <style>
 :root { --bg: #FFF8EC; --ink: #173B2C; --muted: #4E6358; --line: #EADFCB; --leaf: #2F8F5B; --saffron: #F6A623; }
 @media (prefers-color-scheme: dark) { :root { --bg: #0F2219; --ink: #FFF8EC; --muted: #C9D3CC; --line: #24402F; --leaf: #6FD39A; } }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.75 'IBM Plex Sans Arabic', system-ui, sans-serif; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.75 'Baloo Bhaijaan 2', system-ui, sans-serif; }
+[lang="en"] { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; }
 header, section { max-width: 720px; margin: 0 auto; padding: 0 16px; }
 header { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
-.brand { font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 24px; font-weight: 700; }
+.brand { font-size: 24px; font-weight: 700; }
 .langs a { margin-inline-start: 12px; }
 section { padding-top: 24px; padding-bottom: 40px; }
 section + section { border-top: 1px solid var(--line); }
-h1 { font-family: 'Baloo Bhaijaan 2', sans-serif; font-size: 32px; line-height: 1.3; margin: 0 0 4px; }
-section[lang="en"] h1 { font-family: 'Fraunces', serif; }
+h1 { font-size: 32px; line-height: 1.5; margin: 0 0 4px; }
+section[lang="en"] h1 { font-family: 'Fraunces', serif; line-height: 1.3; }
 h2 { font-size: 19px; font-weight: 600; margin: 28px 0 6px; }
 p, li { color: var(--muted); margin: 0 0 10px; }
 .intro { color: var(--ink); }
@@ -34,24 +35,26 @@ a { color: var(--leaf); }
 <main>
 <section lang="ar" dir="rtl" id="ar">
 <h1>الدعم</h1>
-<p class="updated">آخر تحديث: 15 أكتوبر 2026</p>
+<p class="updated">آخر تحديث: 21 أكتوبر 2026</p>
 <p class="intro">نحب نسمع منك: سؤال، أو اقتراح، أو شي ما اشتغل. راسلنا على support@monthful.app ونرد عليك في أقرب وقت.</p>
 <h2>إلغاء الاشتراك</h2>
 <p>يتم الاشتراك عن طريق Apple أو Google، وتلغيه من إعدادات الاشتراكات في جوالك: على iPhone من الإعدادات ← اسمك ← الاشتراكات، وعلى Android من Google Play ← الدفع والاشتراكات.</p>
 <h2>حذف حسابك</h2>
-<p>من التطبيق: حسابي ← احذف حسابي. يُحذف حسابك وكل بياناته من خوادمنا فوراً، ويُمسح كل شيء من جوالك.</p>
+<p>من التطبيق: حسابي ← احذف حسابي. يُحذف حسابك وكل بياناته من خوادمنا فوراً، ويُمسح كل شيء من جوالك. ويمشي هذا مع كل حساب، حتى لو دخلت برقم جوالك بدون إيميل.</p>
 <p>ما تقدر تفتح التطبيق؟ راسلنا من الإيميل اللي سجّلت فيه على <a href="mailto:support@monthful.app">support@monthful.app</a> بعنوان «حذف الحساب»، ونحذف حسابك وكل بياناته خلال 7 أيام ونأكّد لك.</p>
+<p>دخلت برقم جوالك بس؟ نزّل التطبيق وادخل بنفس الرقم (يوصلك الرمز برسالة)، وبعدين حسابي ← احذف حسابي. وإذا ما قدرت، راسلنا من أي إيميل على <a href="mailto:support@monthful.app">support@monthful.app</a> بعنوان «حذف الحساب» واكتب رقم الجوال اللي دخلت فيه، ونتأكد إنه رقمك وبعدين نحذف حسابك وكل بياناته خلال 7 أيام ونأكّد لك.</p>
 <p>حذف الحساب ما يلغي اشتراكك مع Apple أو Google، فألغه من جوالك أيضاً.</p>
 </section>
 <section lang="en" dir="ltr" id="en">
 <h1>Support</h1>
-<p class="updated">Last updated: 15 October 2026</p>
+<p class="updated">Last updated: 21 October 2026</p>
 <p class="intro">We'd love to hear from you: a question, an idea, or something that didn't work. Write to support@monthful.app and we'll get back to you soon.</p>
 <h2>Cancelling your subscription</h2>
 <p>Subscriptions go through Apple or Google, and you cancel in your phone's subscription settings: on iPhone, Settings, your name, Subscriptions; on Android, Google Play, Payments &amp; subscriptions.</p>
 <h2>Deleting your account</h2>
-<p>In the app: Account, Delete account. Your account and all its data are deleted from our servers straight away, and everything is cleared from your phone.</p>
+<p>In the app: Account, Delete account. Your account and all its data are deleted from our servers straight away, and everything is cleared from your phone. This works for every account, even one made with a phone number and no email.</p>
 <p>Can't open the app? Email <a href="mailto:support@monthful.app">support@monthful.app</a> from the address you signed in with, with the subject &quot;Delete account&quot;, and we'll delete your account and all its data within 7 days and confirm.</p>
+<p>Signed in with only your phone number? Install the app, sign in with the same number (the code comes by text), then Account, Delete account. If you can't, email <a href="mailto:support@monthful.app">support@monthful.app</a> from any address with the subject &quot;Delete account&quot; and the phone number you signed in with; we'll check the number is yours, then delete your account and all its data within 7 days and confirm.</p>
 <p>Deleting your account doesn't cancel a subscription with Apple or Google, so cancel it on your phone too.</p>
 </section>
 </main>
