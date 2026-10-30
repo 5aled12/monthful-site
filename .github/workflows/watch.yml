@@ -1,0 +1,78 @@
+# Every hour, checks that monthful.app works (.github/watch.mjs says what it looks at).
+# When something's wrong, the run fails and an issue opens here, assigned to 5aled12 and naming both founders, so GitHub
+# emails them with what's wrong and what to do; a reminder follows every six hours, and the issue closes by itself once
+# every check passes again.
+name: Watch monthful.app
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: write
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TITLE: monthful.app is down
+      WHO: '@5aled12 @Qubec-bit'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+
+      # The runner's own Node (20 or newer) runs it: one less download that could fail.
+      - name: Check the domain, the pages, mail and HTTPS
+        id: check
+        run: node .github/watch.mjs
+        env:
+          REPORT_FILE: ${{ runner.temp }}/report.md
+
+      # Only a failed check opens an issue; a hiccup in GitHub itself just fails the run.
+      - name: Open an issue
+        if: failure() && steps.check.outcome == 'failure'
+        run: |
+          open=$(gh issue list --state open --json number,title --jq "map(select(.title == \"$TITLE\")) | .[0].number // empty")
+          {
+            echo "$WHO"
+            echo
+            cat "$RUNNER_TEMP/report.md" 2>/dev/null || echo "The check stopped before it could say what's wrong: see the run."
+            echo
+            echo "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          } > "$RUNNER_TEMP/body.md"
+          if [ -z "$open" ]; then
+            gh issue create --title "$TITLE" --assignee 5aled12 --body-file "$RUNNER_TEMP/body.md"
+          elif [ $(( 10#$(date -u +%H) % 6 )) -eq 0 ]; then
+            # Still down: a reminder every six hours, not every hour.
+            gh issue comment "$open" --body-file "$RUNNER_TEMP/body.md"
+          fi
+
+      - name: Close the issue
+        if: steps.check.outcome == 'success'
+        continue-on-error: true
+        run: |
+          open=$(gh issue list --state open --json number,title --jq "map(select(.title == \"$TITLE\")) | .[0].number // empty")
+          if [ -n "$open" ]; then
+            gh issue close "$open" --comment "$WHO back up: every check passed at $(date -u '+%d %b %Y, %H:%M') UTC."
+          fi
+
+      # GitHub pauses a public repo's scheduled workflows after 60 days with no commits; switching it on again, once a
+      # day, restarts that count.
+      - name: Keep the hourly check switched on
+        if: always()
+        continue-on-error: true
+        run: |
+          if [ "$(date -u +%H)" = "03" ] || [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            gh api -X PUT "repos/$GITHUB_REPOSITORY/actions/workflows/watch.yml/enable"
+          fi
