@@ -71,6 +71,8 @@ h1 { font-size: clamp(24px, 6.4vw, 32px); font-weight: 700; line-height: 1.6; ma
 footer { padding: 20px 16px calc(24px + env(safe-area-inset-bottom)); text-align: center; font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); }
 footer p { margin: 2px 0; }
 footer .tm { margin-top: 10px; font-size: 12px; line-height: 1.5; }
+footer .org { margin-top: 10px; font-size: 13px; }
+footer .org + .org { margin-top: 0; }
 a { color: var(--leaf); }
 .badge:focus-visible, footer a:focus-visible { outline: 2px solid var(--leaf); outline-offset: 3px; border-radius: 8px; }
 </style>
@@ -88,6 +90,8 @@ a { color: var(--leaf); }
 <footer>
 <p><a href="/terms/">شروط الاستخدام</a><span aria-hidden="true"> · </span><a href="/privacy/">سياسة الخصوصية</a><span aria-hidden="true"> · </span><a href="/support/">دعم منثفُل</a></p>
 <p lang="en" dir="ltr"><a href="/terms/">Terms of Use</a><span aria-hidden="true"> · </span><a href="/privacy/">Privacy Policy</a><span aria-hidden="true"> · </span><a href="/support/">Monthful support</a></p>
+<p class="org">منثفُل من مؤسسة عبدالعزيز محمد بن حسين ال الحارث التجارية · سجل تجاري 2050199106</p>
+<p class="org" lang="en" dir="ltr">Monthful is a product of Establishment ABDULAZIZ MOHAMED BEN HASSIN AL- AL-HARITH Commercial · CR 2050199106</p>
 <p class="tm" lang="en" dir="ltr">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
 </footer>
 </body>
