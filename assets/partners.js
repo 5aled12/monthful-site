@@ -462,8 +462,8 @@ function dashboard(s) {
         'p',
         { class: 'small muted' },
         t(
-          'تكسب 10% من كل دفعة يدفعها عملاؤك، من السعر اللي يدفعه العميل نفسه، ونحسبها بالريال. الأسبوع المجاني ما فيه دفع، والدفعة اللي تنرد للعميل تنخصم.',
-          'You earn 10% of every payment your customers make, of the price the customer pays, counted in riyals. The free week has no payment, and refunds come off.',
+          'تكسب 15% من كل دفعة يدفعها عملاؤك، من السعر اللي يدفعه العميل نفسه، ونحسبها بالريال. الأسبوع المجاني ما فيه دفع، والدفعة اللي تنرد للعميل تنخصم.',
+          'You earn 15% of every payment your customers make, of the price the customer pays, counted in riyals. The free week has no payment, and refunds come off.',
         ),
       ),
       payouts.length

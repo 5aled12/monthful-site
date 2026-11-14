@@ -567,7 +567,7 @@ function dashboard() {
       el(
         'p',
         { class: 'small muted' },
-        t('كل شريك يكسب 10% من كل دفعة يدفعها عملاؤه، من السعر اللي يدفعه العميل، بالريال. الأرقام نفسها اللي يشوفها في صفحته.', 'Each partner earns 10% of every payment their customers make, of the price the customer pays, in riyals. These are the numbers they see on their page.'),
+        t('كل شريك يكسب 15% من كل دفعة يدفعها عملاؤه، من السعر اللي يدفعه العميل، بالريال. الأرقام نفسها اللي يشوفها في صفحته.', 'Each partner earns 15% of every payment their customers make, of the price the customer pays, in riyals. These are the numbers they see on their page.'),
       ),
       panel && panel.kind === 'partner' && !panel.id
         ? partnerPanel(panel)
