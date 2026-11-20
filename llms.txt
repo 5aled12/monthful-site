@@ -1,0 +1,35 @@
+# Monthful (منثفُل)
+
+> Monthful is an iPhone app, in Arabic and English, for households in Saudi Arabia, the UAE, Kuwait, Qatar, Bahrain and Oman. A household gives it a food budget, how many they are, a period (one week, two weeks or a month) and the supermarket they use; Monthful plans a dish for every meal, writes the grocery list in grams with estimated prices in that store's pack sizes, and walks through each dish step by step.
+
+## What it does
+- A meal plan within the budget: breakfast, lunch and dinner, from Gulf favourites (kabsa, mandi, machboos, saloona) to pasta and salads. Any upcoming dish can be swapped in one tap, and the list and totals re-price.
+- More than 800 dishes, each with a photo, steps that name the heat, a time and how you know it's done, cups and spoons beside the grams for a kitchen without a scale, and approximate calories and protein per plate.
+- A grocery list in grams, grouped by aisle, that can be sent on WhatsApp.
+- Allergies: it leaves out dishes whose ingredients usually contain the allergies the household names. Products differ from brand to brand, so check the label too.
+- Guests: add them to a meal and the amounts and groceries adjust.
+- An account is optional.
+
+## Prices
+- Prices are estimates based on typical Gulf supermarket prices, not live store prices; the store's price at the till is the final one. Monthful is not affiliated with the supermarkets or delivery apps it names.
+
+## Subscription
+- Monthful works with a subscription through the App Store: 1, 2, 3, 6 or 12 months, the longer the plan the less a month, priced by the App Store in each country's currency.
+- The first week is free for new subscribers where offered. Cancel anytime in the iPhone's Settings, at least 24 hours before the trial or period ends.
+
+## Where to get it
+- App Store (iPhone): https://apps.apple.com/app/id6825291719
+- Android: coming to Google Play, not available yet.
+
+## Pages
+- [Home](https://monthful.app/)
+- [Terms of Use](https://monthful.app/terms/)
+- [Privacy Policy](https://monthful.app/privacy/)
+- [Support, cancelling and deleting an account](https://monthful.app/support/)
+- Contact: support@monthful.app
+
+## بالعربي
+- منثفُل تطبيق آيفون بالعربي والإنجليزي لبيوت السعودية والإمارات والكويت وقطر والبحرين وعُمان: تكتب ميزانية الأكل وكم شخص عندكم والمدة (أسبوع، أسبوعين، أو شهر) والسوبرماركت اللي تشترون منه، ويعطيك طبخة لكل وجبة، وقائمة مقاضي بالجرام بأسعار تقديرية على عبوات المتجر، وخطوات الطبخ وحدة وحدة.
+- أكثر من 800 طبخة، كل وحدة بصورتها، والسعرات والبروتين تقريبية.
+- الأسعار تقديرية، وسعر المتجر وقت الشراء هو النهائي، ومنثفُل ما له علاقة بالمتاجر أو تطبيقات التوصيل اللي يذكرها.
+- يشتغل باشتراك من App Store لمدة شهر أو شهرين أو 3 أو 6 شهور أو سنة، وأول أسبوع مجاني للمشتركين الجدد إذا كان العرض متاح لك.

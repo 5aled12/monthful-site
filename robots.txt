@@ -1,0 +1,15 @@
+# monthful.app: search engines and AI answer tools are welcome.
+# Crawlers that only collect pages to train AI models are not.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+User-agent: Bytespider
+Disallow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://monthful.app/sitemap.xml
